@@ -1,0 +1,12 @@
+.loading {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.error {
+  color: red;
+  margin: 0 auto;
+  text-align: center;
+}

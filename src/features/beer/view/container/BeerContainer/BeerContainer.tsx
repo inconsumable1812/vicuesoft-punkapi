@@ -46,9 +46,11 @@ const BeerContainer: FC<Props> = ({ beer, activePage, beerPerPage }) => {
         placeholder="Поиск пива..."
       ></input>
       <div className={`${styles.container}`}>
-        {filteredBeer.map((b) => (
-          <BeerCard key={b.id} beer={b}></BeerCard>
-        ))}
+        {filteredBeer.length === 0 ? (
+          <p>Такое пиво не найдено!</p>
+        ) : (
+          filteredBeer.map((b) => <BeerCard key={b.id} beer={b}></BeerCard>)
+        )}
       </div>
       <Pagination
         activePage={activePage}
