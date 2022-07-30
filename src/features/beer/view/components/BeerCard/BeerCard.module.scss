@@ -6,9 +6,13 @@
 .container {
   border: 1px solid #eee;
   box-shadow: 2px 2px 8px rgb(115, 112, 176);
-  min-height: 300px;
+  min-height: 240px;
   text-decoration: none;
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    min-height: 300px;
+  }
 
   &:hover,
   &:focus {
