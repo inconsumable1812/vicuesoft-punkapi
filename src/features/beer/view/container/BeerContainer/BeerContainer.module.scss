@@ -1,6 +1,6 @@
 .input {
   width: 100%;
-  margin: 5px 0 20px;
+  margin: 5px 0 10px;
   padding: 4px;
 }
 
@@ -32,4 +32,11 @@
 
 .disabledItem {
   opacity: 0.4;
+}
+
+.selectContainer {
+  margin: 0 0 15px;
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
 }

@@ -1,12 +1,11 @@
 import type { QueryParameters, Response } from './types';
 
 const fetch = async ({
-  page,
-  per_page = 25
+  id
 }: QueryParameters): Promise<Response | globalThis.Error> => {
   try {
     const response = await globalThis.fetch(
-      `https://api.punkapi.com/v2/beers?page=${page.toString()}&per_page=${per_page.toString()}`
+      `https://api.punkapi.com/v2/beers/${id.toString()}`
     );
 
     const data = await response.json();

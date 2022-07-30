@@ -5,7 +5,8 @@ const initialState: State = {
   error: null,
   beer: [],
   activePage: 1,
-  beerPerPage: 25
+  beerPerPage: 25,
+  currentBeer: null
 };
 
 export { initialState };

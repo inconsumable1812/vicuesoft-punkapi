@@ -5,6 +5,7 @@ type State = {
   status: RequestStatus;
   error: string | null;
   beer: Beer[];
+  currentBeer: Beer | null;
   activePage: number;
   beerPerPage: number;
 };
