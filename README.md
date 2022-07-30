@@ -12,4 +12,4 @@ Starts the local server with the result of the development build. Open [http://l
 
 ## Demo
 
-[demo](https://radios-gamma.vercel.app/)
+[demo](https://vicuesoft-punkapi.vercel.app/)
