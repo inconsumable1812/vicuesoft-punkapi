@@ -10,9 +10,8 @@ type Props = {
 const PageHead: FC<Props> = (props) => {
   const {
     title,
-    children,
-    keywords = 'MetaLamp, Trello, Google sheets, API, visualization',
-    description = 'Visualizer of API of Trello and Google sheets',
+    keywords = 'ViCue Soft, Beer, Punk API, visualization',
+    description = 'Test project on visualization of PUNK API'
   } = props;
 
   return Head({
@@ -21,9 +20,8 @@ const PageHead: FC<Props> = (props) => {
         <title>{title}</title>
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
-        {children}
       </>
-    ),
+    )
   });
 };
 

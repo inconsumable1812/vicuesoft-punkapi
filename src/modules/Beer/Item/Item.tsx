@@ -8,7 +8,7 @@ import styles from './Item.module.scss';
 const Item: NextPage = () => {
   return (
     <>
-      <PageHead title={'Beer'} />
+      <PageHead title={'Beer Item'} />
       <div className={`${styles.root}`}>
         <BeerComponent view="item"></BeerComponent>
       </div>
