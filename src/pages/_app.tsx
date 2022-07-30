@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { FC } from 'react';
 import type { AppProps } from 'next/app';
 import { wrapper } from 'src/app/store';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 const CustomApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
