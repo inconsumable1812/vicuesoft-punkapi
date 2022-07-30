@@ -5,6 +5,8 @@ type State = {
   status: RequestStatus;
   error: string | null;
   beer: Beer[];
+  activePage: number;
+  beerPerPage: number;
 };
 
 export type { State };

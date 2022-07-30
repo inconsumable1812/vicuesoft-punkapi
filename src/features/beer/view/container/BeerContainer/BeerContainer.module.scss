@@ -9,3 +9,27 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  column-gap: 6px;
+  margin: 20px 0 10px;
+}
+
+.paginationItem {
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.activeItem {
+  background-color: rgb(0, 0, 181);
+  color: white;
+}
+
+.disabledItem {
+  opacity: 0.4;
+}

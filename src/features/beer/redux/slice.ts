@@ -7,7 +7,14 @@ import { selectBeer } from './selectors';
 const slice = createSlice({
   name: 'beer',
   initialState,
-  reducers: {},
+  reducers: {
+    changeActivePage: (state, action) => {
+      state.activePage = action.payload;
+    },
+    changeBeerPerPage: (state, action) => {
+      state.beerPerPage = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getBeer.pending, (state) => {
@@ -28,4 +35,6 @@ const slice = createSlice({
 
 const { reducer } = slice;
 
-export { reducer, getBeer, selectBeer };
+const { changeBeerPerPage, changeActivePage } = slice.actions;
+
+export { reducer, getBeer, selectBeer, changeBeerPerPage, changeActivePage };

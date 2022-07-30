@@ -11,11 +11,12 @@ type Props = {};
 
 const Beer: FC<Props> = () => {
   const dispatch = useAppDispatch();
-  const { beer, status, error } = useAppSelector(selectBeer);
+  const { beer, status, error, beerPerPage, activePage } =
+    useAppSelector(selectBeer);
 
   useEffect(() => {
-    dispatch(getBeer({ page: 1 }));
-  }, [dispatch]);
+    dispatch(getBeer({ page: activePage, per_page: beerPerPage }));
+  }, [activePage, beerPerPage, dispatch]);
 
   switch (status) {
     case REQUEST_STATUS.pending:
@@ -26,7 +27,13 @@ const Beer: FC<Props> = () => {
       );
 
     case REQUEST_STATUS.fulfilled:
-      return <BeerContainer beer={beer}></BeerContainer>;
+      return (
+        <BeerContainer
+          activePage={activePage}
+          beer={beer}
+          beerPerPage={beerPerPage}
+        ></BeerContainer>
+      );
     default:
       return <p>{error}</p>;
   }

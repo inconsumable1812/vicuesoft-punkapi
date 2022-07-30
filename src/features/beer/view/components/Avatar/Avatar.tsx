@@ -13,7 +13,7 @@ const Avatar: FC<Props> = ({ beer }) => {
     <div className={`${styles.container}`}>
       <Image
         className={`${styles.image}`}
-        src={beer.image_url}
+        src={beer.image_url === null ? '/img/beer-mock.svg' : beer.image_url}
         alt={beer.name}
         layout="fill"
       ></Image>
